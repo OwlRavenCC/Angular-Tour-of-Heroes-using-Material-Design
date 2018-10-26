@@ -10,6 +10,7 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { HeroesComponent } from './heroes/heroes.component';
 
 import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

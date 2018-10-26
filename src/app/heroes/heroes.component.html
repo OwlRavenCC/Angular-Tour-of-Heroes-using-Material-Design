@@ -1,11 +1,24 @@
-<h2>{{hero.name | uppercase}} Details</h2>
+<h2>My Heroes</h2>
+<mat-nav-list class="heroes">
+    <span mat-list-item *ngFor="let hero of heroes" (click)="onSelect(hero)">
+      <span class="id">{{hero.id}} </span>
+      <span [class.selected]="hero === selectedHero" class="name"> {{hero.name}} </span>
+    </span>
+</mat-nav-list>
 
-<div class="fields-container">
-<mat-form-field class="input-text-material">
-    <input matInput [(ngModel)]="hero.id" placeholder="id">
-</mat-form-field>
 
-<mat-form-field class="input-text-material">
-    <input matInput [(ngModel)]="hero.name" placeholder="name">
-</mat-form-field>
+<div class="details" *ngIf="selectedHero">
+
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+
+  <div class="fields-container">
+  <mat-form-field class="input-text-material">
+      <input matInput [(ngModel)]="selectedHero.id" placeholder="id">
+  </mat-form-field>
+
+  <mat-form-field class="input-text-material">
+      <input matInput [(ngModel)]="selectedHero.name" placeholder="name">
+  </mat-form-field>
+  </div>
+
 </div>
