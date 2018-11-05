@@ -6,16 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+/*-------------
+Components
+---------------*/
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
 
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
